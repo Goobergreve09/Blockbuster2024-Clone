@@ -44,9 +44,6 @@ button {
   color: var(--primary-color);
 }
 
-button:hover {
-  transform: scale(1.1);
-}
 
 .icon-row img {
   width: 100px;
