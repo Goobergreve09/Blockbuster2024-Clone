@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Navbar, Nav, Modal, Tab } from "react-bootstrap";
+import { Navbar, Nav, Modal, Tab, Container } from "react-bootstrap";
 
 import Auth from "../utils/auth";
 
@@ -28,12 +28,13 @@ const AppNavbar = () => {
 
   return (
     <>
+    
       <Navbar
         bg="dark"
         variant="dark"
         expand="lg"
         expanded={expanded}
-        className="custom-navbar d-flex"
+        className="custom-navbar "
       >
         <Navbar.Brand background="dark" as={Link} to="/">
           <img
@@ -148,6 +149,7 @@ const AppNavbar = () => {
           </Modal.Body>
         </Tab.Container>
       </Modal>
+    
     </>
   );
 };
