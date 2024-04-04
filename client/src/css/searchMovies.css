@@ -31,18 +31,7 @@ a {
   text-decoration: none;
 }
 
-button {
-  color: #fff;
-  border: none;
-  padding: 20px;
-  outline: none;
-  font-size: 12px;
-  background: var(--secondary-color);
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  transition: 200ms ease-in-out;
-  color: var(--primary-color);
-}
+
 
 
 .icon-row img {
