@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Navbar, Nav, Modal, Tab, } from "react-bootstrap";
+import { Navbar, Nav, Modal, Tab } from "react-bootstrap";
 
 import Auth from "../utils/auth";
 
@@ -22,13 +22,12 @@ const AppNavbar = () => {
 
   const handleLinkClick = () => {
     if (expanded) {
-    setExpanded(false);
+      setExpanded(false);
     }
   };
 
   return (
     <>
-    
       <Navbar
         bg="dark"
         variant="dark"
@@ -136,7 +135,7 @@ const AppNavbar = () => {
               </Nav>
             </Modal.Title>
           </Modal.Header>
-          
+
           <Modal.Body>
             <Tab.Content>
               <Tab.Pane eventKey="login">
@@ -149,7 +148,6 @@ const AppNavbar = () => {
           </Modal.Body>
         </Tab.Container>
       </Modal>
-    
     </>
   );
 };
