@@ -14,6 +14,7 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaVideo } from "react-icons/fa";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import watchlistBackground from '../assets/images/watchlist-background.jpeg'
 
 import "../css/myFavoritedmovies.css";
 import "../css/watchlist.css";
@@ -52,7 +53,7 @@ const Watchlist = () => {
 
   return (
     <>
-      <Container fluid className="full-container-watchlist">
+      <Container fluid className="full-container-watchlist"style={{ backgroundImage: `url(${watchlistBackground})` }}>
         <Row className="justify-content-center pt-2">
           <Card className="saved-header-card ">
             <Card.Header as="h5">

@@ -34,6 +34,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as regularHeart } from "@fortawesome/free-regular-svg-icons";
 import { faHeart as solidHeart } from "@fortawesome/free-solid-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
+import searchMoviesBackground from "../assets/images/search-movies-background.jpg"
 
 import "../css/searchMovies.css";
 
@@ -177,7 +178,7 @@ const SearchMovies = () => {
 
   return (
     <>
-      <Container fluid className="search-background">
+      <Container fluid className="search-background" style={{backgroundImage:`url(${searchMoviesBackground})`}}>
         <Container>
           <Row className="justify-content-center pt-2 pb-4">
             <Card className="saved-header-card">

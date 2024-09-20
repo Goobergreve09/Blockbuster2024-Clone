@@ -9,6 +9,7 @@ import getRandomMessage from "../utils/randomMessage";
 import { SAVE_BOOK } from "../utils/mutations";
 
 import blockbusterLogo from "../assets/images/BlockbusterOriginalLogo.png";
+import booksBackground from "../assets/images/books-background.jpg"
 
 import { Container, Col, Form, Button, Card, Row } from "react-bootstrap";
 import "../css/searchBooks.css";
@@ -90,7 +91,7 @@ const SearchBooks = () => {
 
   return (
     <>
-      <Container fluid className="search-background-books">
+      <Container fluid className="search-background-books"style={{backgroundImage:`url(${booksBackground})`}}>
         <Container>
           <Row className="justify-content-center pt-2 pb-4">
             <Card className="saved-header-card">

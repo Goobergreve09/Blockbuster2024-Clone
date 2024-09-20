@@ -14,6 +14,7 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FaVideo } from "react-icons/fa";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import favorite_mov_background from "../assets/images/favorite_movies.jpg"
 
 import "../css/myFavoritedmovies.css";
 
@@ -53,7 +54,8 @@ const MyFavoritedMovies = () => {
 
   return (
     <>
-      <Container fluid className="full-container">
+   <Container fluid className="full-container" style={{ backgroundImage: `url(${favorite_mov_background})` }}>
+
         <Row className="justify-content-center pt-2">
           <Card className="saved-header-card ">
             <Card.Header as="h5">

@@ -10,6 +10,7 @@ import { REMOVE_BOOK } from "../utils/mutations";
 
 import { Container, Card, Button, Row, Col } from "react-bootstrap";
 import "../css/savedBooks.css";
+import savedBooksBackground from "../assets/images/saved-books.jpg"
 
 const SavedBooks = () => {
   const { loading, data } = useQuery(QUERY_ME);
@@ -37,7 +38,7 @@ const SavedBooks = () => {
 
   return (
     <>
-      <Container fluid className="background-image">
+      <Container fluid className="background-image"style={{backgroundImage:`url(${savedBooksBackground})`}}>
         <Container>
           <Row className="justify-content-center pt-2 pb-4">
             <Card className="saved-header-card">
