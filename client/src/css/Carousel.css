@@ -1,17 +1,4 @@
-.carousel {
-  position: static center;
-  display: block;
-  height: 350px;
-  max-width: 100%;
-  margin: auto;
-  overflow: hidden;
-}
-
-.carousel img {
-border-radius: 25px;
-
-}
-
+.carousel {position: static center;display: block;height: 350px;max-width: 100%;margin: auto;overflow: hidden;}.carousel img {border-radius: 25px;}
 
 
 
