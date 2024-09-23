@@ -1,7 +1,11 @@
+require('dotenv').config()
+
+
 const { MongoClient } = require('mongodb');
 
 // MongoDB connection URI (Update this if you're using MongoDB Atlas or a different connection)
-const uri = 'mongodb://127.0.0.1:27017/blockbuster2024'; 
+const uri = process.env.MONGODB_URI; 
+console.log(uri)
 
 // Create a MongoClient instance
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
