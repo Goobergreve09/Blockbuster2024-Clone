@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
-
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
-const { authMiddleware } = require('./utils/auth')
-
+const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
+
+const { startPinging } = require('./pingMongo.js'); // Updated
 
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
@@ -39,6 +39,8 @@ const startApolloServer = async () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
       console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
+      // Start pinging after DB is open
+      startPinging(); 
     });
   });
 };

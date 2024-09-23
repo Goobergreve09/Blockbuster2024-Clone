@@ -1,5 +1,5 @@
 const { signToken, AuthenticationError, generateResetToken } = require("../utils/auth.js");
-const { User } = require("../models");
+const { User } = require("../models/models.min.js");
 
 
 
