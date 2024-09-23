@@ -1,6 +1,9 @@
 name: Ping MongoDB
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '*/5 * * * *' # Every 5 minutes
 
@@ -14,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14' # or your desired Node.js version
+          node-version: '14'
 
       - name: Install dependencies
         run: npm install
@@ -22,4 +25,5 @@ jobs:
       - name: Run ping script
         run: node pingMongo.js
         env:
-          MONGODB_URI: ${{ secrets.MONGODB_URI }} # Use GitHub secrets for sensitive info
+          MONGODB_URI: ${{ secrets.MONGODB_URI }}
+
