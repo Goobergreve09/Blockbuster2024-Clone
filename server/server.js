@@ -6,7 +6,6 @@ const { authMiddleware } = require('./utils/auth');
 const { typeDefs, resolvers } = require('./schemas');
 const db = require('./config/connection');
 
-const { startPinging } = require('./pingMongo.js'); // Updated
 
 const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
@@ -40,7 +39,6 @@ const startApolloServer = async () => {
       console.log(`API server running on port ${PORT}!`);
       console.log(`Use GraphQL at http://localhost:${PORT}/graphql`);
       // Start pinging after DB is open
-      startPinging(); 
     });
   });
 };
