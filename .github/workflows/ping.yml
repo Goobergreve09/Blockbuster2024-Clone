@@ -26,7 +26,7 @@ jobs:
         run: printenv # This will print out environment variables, including MONGODB_URI if set
 
       - name: Run ping script
-        run: node pingMongo.js
+        run: node server/pingMongo.js
         env:
           MONGODB_URI: ${{ secrets.MONGODB_URI }}
 
